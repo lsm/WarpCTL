@@ -1,2 +1,35 @@
+The following provide brief instructions for building the
+JADL-SDK module.
+
+The first thing you will need to do is build the java
+source code and binary library.
+
 see build.sh for an example build script
+
+After the library is built and installed you will need to modify
+the primary API java class which can be found in your build 
+directory named 
+
+java/src/com/vnetpublishing/swig/adl/jadl_sdk.java
+
+
+Current versions of clojure have a bug which makes loading
+IDL libraries at runtime nearly impossible. To get around this
+bug you will need to perform the following code modification.
+
+In the top of the java class add the following code...
+
+static {
+   try {
+      System.loadLibrary("jadlsdk");
+   } catch (Throwable t) {
+   }
+}
+
+Once your java sources are prepared you will need to compile all of
+the java sources and build them into a jar. Once the jar is built
+it will need to be named jadl-sdk-1.0.jar and stored in the project
+folder (extra/JADL-SDK/jadl-sdk-1.0.jar).
+
+
 
