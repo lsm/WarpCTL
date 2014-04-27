@@ -17,7 +17,7 @@ SWIG_JAVABODY_TYPEWRAPPER(public, public, public, SWIGTYPE)
 // knows about things like int *OUTPUT:
 %include "typemaps.i"
 // knows about int32_t
-%include "stdint.i"
+// %include "stdint.i" // Not windows friendly!
 %include "arrays_java.i"
 %apply int[] {int *};
 
