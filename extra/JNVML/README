@@ -1,0 +1,12 @@
+
+See build64.sh for an example build script. 
+
+Note: The currently the build system is only designed to support 
+64 bit windows. 
+
+For this to work the nvml.dll needs to be copied from 
+C:\Program Files\NVIDIA Corporation\NVSMI into the 
+C:\Windows\System32 directory as Java doesn't search this path when 
+looking for libraries. The generated dll in 
+builddir/src/.libs/libjnvml-0.dll also needs to be renamed to 
+jnvml.dll and placed in the C:\Windows\System32 folder
