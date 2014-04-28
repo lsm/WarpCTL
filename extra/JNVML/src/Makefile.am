@@ -1,0 +1,8 @@
+
+AM_CPPFLAGS = -I$(top_srcdir)/include
+
+AM_LDFLAGS = -L$(abs_top_builddir)/win -Wl,--whole-archive -lnvml -Wl,--no-whole-archive
+
+lib_LTLIBRARIES = libjnvml.la 
+libjnvml_la_SOURCES = jnvml.c
+libjnvml_la_LIBADD = ../swig/libjnvml_wrap.la

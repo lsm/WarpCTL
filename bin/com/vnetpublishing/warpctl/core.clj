@@ -2,6 +2,7 @@
   (:gen-class)
   (:require
      [com.vnetpublishing.opencl.core :as opencl]
+     [com.vnetpublishing.adl.core :as adl]
      [com.vnetpublishing.warpctl.obj]
   )
 )
@@ -85,30 +86,39 @@
   )
 )
 
-(defn- load-JADL-SDK []
-  (try
-    (do 
-      (com.vnetpublishing.swig.adl.jadl_sdk/jadl_init)
-      (println "JADL-SDK Initialized")
-       true
-    )
-    (catch Throwable e 
-      (do 
-        (println "WARNING Unable to initialize ADL")
-        (println e)
-        false
+(defn- test-adl
+  []
+  (let [adapters (adl/ADL_Adapter_AdapterInfo_Get)]
+    (println (str "type: " (type adapters)))
+    (println (str "Found " (alength adapters) " ADL Adapters"))
+    (loop [ctr 0]
+      (if (= ctr (alength adapters))
+        nil
+        (recur
+          (do
+            (println 
+              (str
+                "name: "
+                (if (aget adapters ctr) (.getStrAdapterName (aget adapters ctr)) " nul ")
+                "temp: " 
+                (if (aget adapters ctr) (/ (adl/ADL_Overdrive5_Temperature_Get (.getIAdapterIndex (aget adapters ctr))) 1000) " nul ")
+                "C" 
+              )
+              
+            )
+            (+ ctr 1)
+          )
+        )
       )
     )
   )
 )
 
-(defn- unload-JADL-SDK []
-  nil
-)
-
 (defn -main [& args]
   (print-banner)
-  (load-JADL-SDK)
+  (if (adl/init)
+    (test-adl)
+  )
   (let [n (opencl/get-platform-count)]
     (loop [ctr 0]
       (if (= ctr n)
@@ -122,5 +132,5 @@
       )
     )
   )
-  (unload-JADL-SDK)
+  (adl/uninit)
 )
