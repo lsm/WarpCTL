@@ -14,7 +14,7 @@
     )
     (catch Throwable e 
       (do 
-        (println "WARNING Unable to initialize ADL")
+        (println "WARNING Unable to initialize NVML")
         (println e)
         false
       )

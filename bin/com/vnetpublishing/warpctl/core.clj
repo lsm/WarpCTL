@@ -3,6 +3,7 @@
   (:require
      [com.vnetpublishing.opencl.core :as opencl]
      [com.vnetpublishing.adl.core :as adl]
+     [com.vnetpublishing.nvml.core :as nvml]
      [com.vnetpublishing.warpctl.obj]
   )
 )
@@ -86,6 +87,16 @@
   )
 )
 
+(defn- test-nvml
+  []
+  (try
+    (let [unit-count (nvml/nvml-unit-get-count)]
+      (println (str "Found " unit-count " NVML Units"))
+    )
+    (catch Throwable t (println (str "Caught error: " t)))
+  )
+)
+
 (defn- test-adl
   []
   (let [adapters (adl/ADL_Adapter_AdapterInfo_Get)]
@@ -116,9 +127,21 @@
 
 (defn -main [& args]
   (print-banner)
+  
+  (println "")
+  (println "Testing ADL...")
   (if (adl/init)
     (test-adl)
   )
+  (println "")
+  (println "Testing NVML...")
+  (if (nvml/init)
+    (test-nvml)
+  )
+  
+  (println "")
+  (println "Testing OpenCL...")
+  
   (let [n (opencl/get-platform-count)]
     (loop [ctr 0]
       (if (= ctr n)

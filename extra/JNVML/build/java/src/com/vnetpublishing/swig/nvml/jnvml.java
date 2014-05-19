@@ -10,12 +10,16 @@ package com.vnetpublishing.swig.nvml;
 
 public class jnvml implements jnvmlConstants {
   static {
-	  switch(com.vnetpublishing.clj.nativedep.getArchName()) {
-	      case "windows-8.1-amd64":
+	  try {
+	     String p = com.vnetpublishing.clj.nativedep.getArchName();
+	     
+	     if ("windows-8.1-amd64".equals(p)) {
 	    	  //System.load("C:\\Program Files\\NVIDIA Corporation\\NVSMI\\nvml.dll");
 	    	  System.loadLibrary("nvml");
 	          com.vnetpublishing.clj.nativedep.loadResource("/libjnvml-x86_64-w64-mingw32-0.dll","JNVML","1.0","jnvml");
-	          break;
+	     }
+	  } catch (Throwable t) {
+		  
 	  }
 	  
   }
