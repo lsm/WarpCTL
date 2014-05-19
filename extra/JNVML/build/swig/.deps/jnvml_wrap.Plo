@@ -1,0 +1,85 @@
+jnvml_wrap.lo: jnvml_wrap.c \
+ c:/Program\ Files/Java/jdk1.6.0_45/include/jni.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\stdio.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\crtdefs.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\_mingw.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\_mingw_mac.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\_mingw_secapi.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\vadefs.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\sdks/_mingw_directx.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\sdks/_mingw_ddk.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\_mingw_print_push.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\_mingw_off_t.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\swprintf.inl \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\sec_api\stdio_s.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\_mingw_print_pop.h \
+ d:\mingw64\mingw64\lib\gcc\x86_64-w64-mingw32\4.8.2\include\stdarg.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\stdarg.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\_mingw_stdarg.h \
+ c:/Program\ Files/Java/jdk1.6.0_45/include/win32/jni_md.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\stdlib.h \
+ d:\mingw64\mingw64\lib\gcc\x86_64-w64-mingw32\4.8.2\include-fixed\limits.h \
+ d:\mingw64\mingw64\lib\gcc\x86_64-w64-mingw32\4.8.2\include-fixed\syslimits.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\limits.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\sec_api\stdlib_s.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\malloc.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\string.h \
+ d:\mingw64\mingw64\x86_64-w64-mingw32\include\sec_api\string_s.h \
+ ../../include/jnvml.h \
+ d:/opt/gdk_332.85_release/gdk_wddm_amd64_release/nvml/include/nvml.h
+
+c:/Program\ Files/Java/jdk1.6.0_45/include/jni.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\stdio.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\crtdefs.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\_mingw.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\_mingw_mac.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\_mingw_secapi.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\vadefs.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\sdks/_mingw_directx.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\sdks/_mingw_ddk.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\_mingw_print_push.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\_mingw_off_t.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\swprintf.inl:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\sec_api\stdio_s.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\_mingw_print_pop.h:
+
+d:\mingw64\mingw64\lib\gcc\x86_64-w64-mingw32\4.8.2\include\stdarg.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\stdarg.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\_mingw_stdarg.h:
+
+c:/Program\ Files/Java/jdk1.6.0_45/include/win32/jni_md.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\stdlib.h:
+
+d:\mingw64\mingw64\lib\gcc\x86_64-w64-mingw32\4.8.2\include-fixed\limits.h:
+
+d:\mingw64\mingw64\lib\gcc\x86_64-w64-mingw32\4.8.2\include-fixed\syslimits.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\limits.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\sec_api\stdlib_s.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\malloc.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\string.h:
+
+d:\mingw64\mingw64\x86_64-w64-mingw32\include\sec_api\string_s.h:
+
+../../include/jnvml.h:
+
+d:/opt/gdk_332.85_release/gdk_wddm_amd64_release/nvml/include/nvml.h:
