@@ -12,7 +12,8 @@ public final class nvmlReturn_t {
 	  static {
 		  switch(com.vnetpublishing.clj.nativedep.getArchName()) {
 		      case "windows-8.1-amd64":
-		    	  System.load("C:\\Program Files\\NVIDIA Corporation\\NVSMI\\nvml.dll");
+		    	  //System.load("C:\\Program Files\\NVIDIA Corporation\\NVSMI\\nvml.dll");
+		    	  System.loadLibrary("nvml");
 		          com.vnetpublishing.clj.nativedep.loadResource("/libjnvml-x86_64-w64-mingw32-0.dll","JNVML","1.0","jnvml");
 		          break;
 		  }
