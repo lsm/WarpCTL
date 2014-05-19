@@ -169,6 +169,8 @@ case $target in
 esac
 
 
+AC_SUBST(TARGET_TRIPLET, "$target")
+
 AC_CHECK_HEADERS([stdlib.h string.h unistd.h wchar.h])
 
 # Checks for typedefs, structures, and compiler characteristics.

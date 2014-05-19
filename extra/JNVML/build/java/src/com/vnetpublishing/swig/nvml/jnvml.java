@@ -9,9 +9,15 @@
 package com.vnetpublishing.swig.nvml;
 
 public class jnvml implements jnvmlConstants {
-	static {
-		System.loadLibrary("jnvml");
-	}
+  static {
+	  switch(com.vnetpublishing.clj.nativedep.getArchName()) {
+	      case "windows-8.1-amd64":
+	    	  System.load("C:\\Program Files\\NVIDIA Corporation\\NVSMI\\nvml.dll");
+	          com.vnetpublishing.clj.nativedep.loadResource("/libjnvml-x86_64-w64-mingw32-0.dll","JNVML","1.0","jnvml");
+	          break;
+	  }
+	  
+  }
   public static nvmlReturn_t nvmlInit_v2() {
     return nvmlReturn_t.swigToEnum(jnvmlJNI.nvmlInit_v2());
   }

@@ -9,6 +9,16 @@
 package com.vnetpublishing.swig.nvml;
 
 public final class nvmlReturn_t {
+	  static {
+		  switch(com.vnetpublishing.clj.nativedep.getArchName()) {
+		      case "windows-8.1-amd64":
+		    	  System.load("C:\\Program Files\\NVIDIA Corporation\\NVSMI\\nvml.dll");
+		          com.vnetpublishing.clj.nativedep.loadResource("/libjnvml-x86_64-w64-mingw32-0.dll","JNVML","1.0","jnvml");
+		          break;
+		  }
+		  
+	  }
+	
   public final static nvmlReturn_t NVML_SUCCESS = new nvmlReturn_t("NVML_SUCCESS", jnvmlJNI.NVML_SUCCESS_get());
   public final static nvmlReturn_t NVML_ERROR_UNINITIALIZED = new nvmlReturn_t("NVML_ERROR_UNINITIALIZED", jnvmlJNI.NVML_ERROR_UNINITIALIZED_get());
   public final static nvmlReturn_t NVML_ERROR_INVALID_ARGUMENT = new nvmlReturn_t("NVML_ERROR_INVALID_ARGUMENT", jnvmlJNI.NVML_ERROR_INVALID_ARGUMENT_get());

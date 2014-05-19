@@ -71,9 +71,10 @@ am__base_list = \
   sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
 am__installdirs = "$(DESTDIR)$(libdir)"
 LTLIBRARIES = $(lib_LTLIBRARIES)
-libjnvml_la_DEPENDENCIES = ../swig/libjnvml_wrap.la
-am_libjnvml_la_OBJECTS = jnvml.lo
-libjnvml_la_OBJECTS = $(am_libjnvml_la_OBJECTS)
+libjnvml_@TARGET_TRIPLET@_la_DEPENDENCIES = ../swig/libjnvml_wrap.la
+am_libjnvml_@TARGET_TRIPLET@_la_OBJECTS = jnvml.lo
+libjnvml_@TARGET_TRIPLET@_la_OBJECTS =  \
+	$(am_libjnvml_@TARGET_TRIPLET@_la_OBJECTS)
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -87,8 +88,8 @@ CCLD = $(CC)
 LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
 	$(LDFLAGS) -o $@
-SOURCES = $(libjnvml_la_SOURCES)
-DIST_SOURCES = $(libjnvml_la_SOURCES)
+SOURCES = $(libjnvml_@TARGET_TRIPLET@_la_SOURCES)
+DIST_SOURCES = $(libjnvml_@TARGET_TRIPLET@_la_SOURCES)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -165,6 +166,7 @@ STRIP = @STRIP@
 SWIG = @SWIG@
 SWIG_LIB = @SWIG_LIB@
 SWIG_PLATFORM_ARGS = @SWIG_PLATFORM_ARGS@
+TARGET_TRIPLET = @TARGET_TRIPLET@
 VERSION = @VERSION@
 abs_builddir = @abs_builddir@
 abs_srcdir = @abs_srcdir@
@@ -225,9 +227,9 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AM_CPPFLAGS = -I$(top_srcdir)/include
 AM_LDFLAGS = -L$(abs_top_builddir)/win -Wl,--whole-archive -lnvml -Wl,--no-whole-archive
-lib_LTLIBRARIES = libjnvml.la 
-libjnvml_la_SOURCES = jnvml.c
-libjnvml_la_LIBADD = ../swig/libjnvml_wrap.la
+lib_LTLIBRARIES = libjnvml-@TARGET_TRIPLET@.la 
+libjnvml_@TARGET_TRIPLET@_la_SOURCES = jnvml.c
+libjnvml_@TARGET_TRIPLET@_la_LIBADD = ../swig/libjnvml_wrap.la
 all: all-am
 
 .SUFFIXES:
@@ -293,8 +295,8 @@ clean-libLTLIBRARIES:
 	  echo "rm -f \"$${dir}/so_locations\""; \
 	  rm -f "$${dir}/so_locations"; \
 	done
-libjnvml.la: $(libjnvml_la_OBJECTS) $(libjnvml_la_DEPENDENCIES) 
-	$(LINK) -rpath $(libdir) $(libjnvml_la_OBJECTS) $(libjnvml_la_LIBADD) $(LIBS)
+libjnvml-@TARGET_TRIPLET@.la: $(libjnvml_@TARGET_TRIPLET@_la_OBJECTS) $(libjnvml_@TARGET_TRIPLET@_la_DEPENDENCIES) 
+	$(LINK) -rpath $(libdir) $(libjnvml_@TARGET_TRIPLET@_la_OBJECTS) $(libjnvml_@TARGET_TRIPLET@_la_LIBADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)

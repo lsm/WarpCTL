@@ -144,6 +144,7 @@ STRIP = @STRIP@
 SWIG = @SWIG@
 SWIG_LIB = @SWIG_LIB@
 SWIG_PLATFORM_ARGS = @SWIG_PLATFORM_ARGS@
+TARGET_TRIPLET = @TARGET_TRIPLET@
 VERSION = @VERSION@
 abs_builddir = @abs_builddir@
 abs_srcdir = @abs_srcdir@

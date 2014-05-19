@@ -617,6 +617,7 @@ ac_subst_vars='am__EXEEXT_FALSE
 am__EXEEXT_TRUE
 LTLIBOBJS
 LIBOBJS
+TARGET_TRIPLET
 OS_DIRS
 SWIG_PLATFORM_ARGS
 LIB2A
@@ -17386,6 +17387,9 @@ case $target in
   *-*-darwin*)
 	;;
 esac
+
+
+TARGET_TRIPLET="$target"
 
 
 for ac_header in stdlib.h string.h unistd.h wchar.h
