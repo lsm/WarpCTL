@@ -20,11 +20,16 @@ bug you will need to perform the following code modification.
 In the top of the java class add the following code...
 
 static {
-   try {
-      System.loadLibrary("jadlsdk");
-   } catch (Throwable t) {
-   }
+  try {
+     String p = com.vnetpublishing.clj.nativedep.getArchName();
+     if ("linux-amd64".equals(p)) {
+          com.vnetpublishing.clj.nativedep.loadResource("/libjadlsdk-x86_64-unknown-linux-gnu.so","JADL-SDK","1.0","jadlsdk");
+     }
+  } catch (Throwable t) {
+  }
 }
+
+Note: This code may need to be modified to match your individual system and architecture.
 
 Once your java sources are prepared you will need to compile all of
 the java sources and build them into a jar. Once the jar is built
