@@ -1,189 +1,148 @@
-jadl-sdk_wrap.lo jadl-sdk_wrap.o: jadl-sdk_wrap.c \
-  /c/Program\ Files/Java/jdk1.6.0_45/include/jni.h /usr/include/stdio.h \
-  /usr/include/_ansi.h /usr/include/sys/config.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/include/stddef.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/include/stdarg.h \
-  /usr/include/sys/reent.h /usr/include/_ansi.h /usr/include/sys/_types.h \
-  /c/Program\ Files/Java/jdk1.6.0_45/include/win32/jni_md.h \
-  /usr/include/stdlib.h /usr/include/string.h ../../include/jadl_sdk.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/windows.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/windef.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winnt.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winerror.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/basetsd.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/pshpack4.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/poppack.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/wincon.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winbase.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/wingdi.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winuser.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winnls.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winver.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winnetwk.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winreg.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winsvc.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/cderr.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/dde.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/ddeml.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/dlgs.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/imm.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/lzexpand.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/mmsystem.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/nb30.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/rpc.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/rpcdce.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/basetyps.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/rpcdcep.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/rpcnsi.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/rpcnterr.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/shellapi.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/pshpack2.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winperf.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/commdlg.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winspool.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/ole2.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/objbase.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/rpcndr.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/rpcnsip.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/objfwd.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/wtypes.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/unknwn.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/objidl.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/cguid.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/olectlid.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/oleauto.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/oaidl.h \
-  /usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/oleidl.h \
-  /h/opt/ADL-SDK/include/adl_sdk.h \
-  /h/opt/ADL-SDK/include/adl_structures.h \
-  /h/opt/ADL-SDK/include/adl_defines.h ../../include/adl_functions.h
+jadl-sdk_wrap.lo: jadl-sdk_wrap.c /usr/include/stdc-predef.h \
+ /usr/lib/jvm/jdk1.6.0_45/include/jni.h /usr/include/stdio.h \
+ /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/lib/jvm/jdk1.6.0_45/include/linux/jni_md.h /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/sigset.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/string.h \
+ /usr/include/xlocale.h /usr/include/x86_64-linux-gnu/bits/string.h \
+ /usr/include/x86_64-linux-gnu/bits/string2.h ../../include/jadl_sdk.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /home/rritoch/opt/ADL-SDK/include/adl_sdk.h \
+ /home/rritoch/opt/ADL-SDK/include/adl_structures.h \
+ /home/rritoch/opt/ADL-SDK/include/adl_defines.h /usr/include/dlfcn.h \
+ /usr/include/x86_64-linux-gnu/bits/dlfcn.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/getopt.h \
+ ../../include/adl_functions.h
 
-/c/Program\ Files/Java/jdk1.6.0_45/include/jni.h:
+/usr/include/stdc-predef.h:
+
+/usr/lib/jvm/jdk1.6.0_45/include/jni.h:
 
 /usr/include/stdio.h:
 
-/usr/include/_ansi.h:
+/usr/include/features.h:
 
-/usr/include/sys/config.h:
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
-/usr/lib/gcc/i686-pc-msys/3.4.4/include/stddef.h:
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
-/usr/lib/gcc/i686-pc-msys/3.4.4/include/stdarg.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
-/usr/include/sys/reent.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
-/usr/include/_ansi.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h:
 
-/usr/include/sys/_types.h:
+/usr/include/x86_64-linux-gnu/bits/types.h:
 
-/c/Program\ Files/Java/jdk1.6.0_45/include/win32/jni_md.h:
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+
+/usr/lib/jvm/jdk1.6.0_45/include/linux/jni_md.h:
 
 /usr/include/stdlib.h:
 
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/time.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigset.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/alloca.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
 /usr/include/string.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/x86_64-linux-gnu/bits/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/string2.h:
 
 ../../include/jadl_sdk.h:
 
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/windows.h:
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/windef.h:
+/home/rritoch/opt/ADL-SDK/include/adl_sdk.h:
 
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winnt.h:
+/home/rritoch/opt/ADL-SDK/include/adl_structures.h:
 
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winerror.h:
+/home/rritoch/opt/ADL-SDK/include/adl_defines.h:
 
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/basetsd.h:
+/usr/include/dlfcn.h:
 
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/pshpack4.h:
+/usr/include/x86_64-linux-gnu/bits/dlfcn.h:
 
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/poppack.h:
+/usr/include/unistd.h:
 
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/wincon.h:
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winbase.h:
+/usr/include/x86_64-linux-gnu/bits/environments.h:
 
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/wingdi.h:
+/usr/include/x86_64-linux-gnu/bits/confname.h:
 
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winuser.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winnls.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winver.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winnetwk.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winreg.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winsvc.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/cderr.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/dde.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/ddeml.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/dlgs.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/imm.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/lzexpand.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/mmsystem.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/nb30.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/rpc.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/rpcdce.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/basetyps.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/rpcdcep.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/rpcnsi.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/rpcnterr.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/shellapi.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/pshpack2.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winperf.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/commdlg.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/winspool.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/ole2.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/objbase.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/rpcndr.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/rpcnsip.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/objfwd.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/wtypes.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/unknwn.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/objidl.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/cguid.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/olectlid.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/oleauto.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/oaidl.h:
-
-/usr/lib/gcc/i686-pc-msys/3.4.4/../../../../include/w32api/oleidl.h:
-
-/h/opt/ADL-SDK/include/adl_sdk.h:
-
-/h/opt/ADL-SDK/include/adl_structures.h:
-
-/h/opt/ADL-SDK/include/adl_defines.h:
+/usr/include/getopt.h:
 
 ../../include/adl_functions.h:

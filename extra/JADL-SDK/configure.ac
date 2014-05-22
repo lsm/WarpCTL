@@ -6,8 +6,6 @@ AC_INIT([FULL-PACKAGE-NAME], [VERSION], [BUG-REPORT-ADDRESS])
 AC_CANONICAL_SYSTEM
 AM_INIT_AUTOMAKE([subdir-objects])
 
-
-
 AC_CONFIG_SRCDIR([swig/jadl-sdk.i])
 AC_CONFIG_SRCDIR([src/jadl_sdk.c])
 AC_CONFIG_HEADERS([config.h])
@@ -19,8 +17,6 @@ AC_CONFIG_FILES([
  swig/Makefile
  src/Makefile
 ])
-
-
 
 LT_INIT
 
@@ -147,6 +143,7 @@ case $target in
 	;;
 esac
 
+AC_SUBST(TARGET_TRIPLET, "$target")
 
 AC_CHECK_HEADERS([stdlib.h string.h unistd.h wchar.h])
 

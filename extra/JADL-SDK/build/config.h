@@ -5,17 +5,17 @@
 #define HAVE_DLFCN_H 1
 
 /* Define to 1 if you have the <inttypes.h> header file. */
-/* #undef HAVE_INTTYPES_H */
+#define HAVE_INTTYPES_H 1
 
 /* Define to 1 if your system has a GNU libc compatible `malloc' function, and
    to 0 otherwise. */
-#define HAVE_MALLOC 0
+#define HAVE_MALLOC 1
 
 /* Define to 1 if you have the <memory.h> header file. */
 #define HAVE_MEMORY_H 1
 
 /* Define to 1 if you have the <stdint.h> header file. */
-/* #undef HAVE_STDINT_H */
+#define HAVE_STDINT_H 1
 
 /* Define to 1 if you have the <stdlib.h> header file. */
 #define HAVE_STDLIB_H 1
@@ -36,7 +36,7 @@
 #define HAVE_UNISTD_H 1
 
 /* Define to 1 if you have the <wchar.h> header file. */
-/* #undef HAVE_WCHAR_H */
+#define HAVE_WCHAR_H 1
 
 /* Define to the sub-directory in which libtool stores uninstalled libraries.
    */
@@ -70,10 +70,10 @@
 #define VERSION "VERSION"
 
 /* "WinNT version for XP+ support" */
-#define _WIN32_WINNT 0x0501
+/* #undef _WIN32_WINNT */
 
 /* Define to empty if `const' does not conform to ANSI C. */
 /* #undef const */
 
 /* Define to rpl_malloc if the replacement function should be used. */
-#define malloc rpl_malloc
+/* #undef malloc */
